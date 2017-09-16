@@ -35,10 +35,12 @@ import SideBar from "./components/sidebar";
 import Segment from "./components/segment";
 import Toast from "./components/toast";
 import Actionsheet from "./components/actionsheet";
+import NHLogin from "./components/accounts/login/";
 
 const DrawerExample = DrawerNavigator(
   {
     Home: { screen: Home },
+	NHLogin: { screen: NHLogin },
     Anatomy: { screen: Anatomy },
     Header: { screen: Header },
     Footer: { screen: Footer },

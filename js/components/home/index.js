@@ -5,7 +5,7 @@ import { Container, Button, H3, Text, Header, Title, Body, Left, Right } from "n
 
 import styles from "./styles";
 
-const launchscreenBg = require("../../../img/launchscreen-bg.png");
+const launchscreenBg = require("../../../img/MSK_4155_edited.jpg");
 const launchscreenLogo = require("../../../img/logo-kitchen-sink.png");
 
 class Home extends Component {
@@ -26,9 +26,9 @@ class Home extends Component {
 							backgroundColor: "transparent",
 						}}
 					>
-						<H3 style={styles.text}>App to showcase</H3>
+						<H3 style={styles.text}>School connect app</H3>
 						<View style={{ marginTop: 8 }} />
-						<H3 style={styles.text}>NativeBase components</H3>
+						<H3 style={styles.text}>powered by EduSync</H3>
 						<View style={{ marginTop: 8 }} />
 					</View>
 					<View style={{ marginBottom: 80 }}>
@@ -36,7 +36,7 @@ class Home extends Component {
 							style={{ backgroundColor: "#6FAF98", alignSelf: "center" }}
 							onPress={() => this.props.navigation.navigate("DrawerOpen")}
 						>
-							<Text>Lets Go!</Text>
+							<Text>Get started</Text>
 						</Button>
 					</View>
 				</Image>
