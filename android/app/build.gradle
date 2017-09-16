@@ -91,10 +91,13 @@ def enableProguardInReleaseBuilds = false
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    buildToolsVersion '25.0.0'
 
+    aaptOptions {
+        cruncherEnabled = false
+    }
     defaultConfig {
-        applicationId "com.nativebasekitchensink"
+        applicationId "com.EduSync"
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1
