@@ -32,8 +32,8 @@ const datas = [
 		bg: "#C5F442",
 	},
 	{
-		name: "Actionsheet",
-		route: "Actionsheet",
+		name: "Notices",
+		route: "NHNotices",
 		icon: "easel",
 		bg: "#C5F442",
 	},

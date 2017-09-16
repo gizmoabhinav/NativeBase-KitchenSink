@@ -36,11 +36,13 @@ import Segment from "./components/segment";
 import Toast from "./components/toast";
 import Actionsheet from "./components/actionsheet";
 import NHLogin from "./components/accounts/login/";
+import NHNotices from "./components/notice/";
 
 const DrawerExample = DrawerNavigator(
   {
     Home: { screen: Home },
 	NHLogin: { screen: NHLogin },
+	NHNotices: { screen: NHNotices },
     Anatomy: { screen: Anatomy },
     Header: { screen: Header },
     Footer: { screen: Footer },

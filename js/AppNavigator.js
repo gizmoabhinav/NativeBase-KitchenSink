@@ -94,6 +94,7 @@ import AdvSegment from "./components/segment/segmentTab";
 import Toast from "./components/toast";
 import statusBarColor from "./themes/variables";
 import NHLogin from "./components/accounts/login/";
+import NHNotices from "./components/notice/";
 
 class AppNavigator extends Component {
   render() {
