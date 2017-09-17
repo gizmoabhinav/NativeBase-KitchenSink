@@ -18,6 +18,7 @@ import {
 } from "native-base";
 
 import styles from "./styles";
+import JavaBridge from "../../native/";
 
 class Login extends Component {
   render() {
@@ -46,7 +47,7 @@ class Login extends Component {
               <Input />
             </Item>
           </Form>
-          <Button block style={{ margin: 15, marginTop: 50 }}>
+          <Button block style={{ margin: 15, marginTop: 50 }} onPress={() => JavaBridge.show('Awesome', 10)}>
             <Text>Sign In</Text>
           </Button>
         </Content>
