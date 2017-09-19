@@ -36,7 +36,7 @@ const datas = [
 		route: "NHNotices",
 		icon: "easel",
 		bg: "#C5F442",
-	},
+	}/*,
 	{
 		name: "Header",
 		route: "Header",
@@ -181,7 +181,7 @@ const datas = [
 		route: "NHTypography",
 		icon: "paper",
 		bg: "#48525D",
-	},
+	},*/
 ];
 
 class SideBar extends Component {

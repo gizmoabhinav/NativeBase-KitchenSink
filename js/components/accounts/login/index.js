@@ -21,6 +21,14 @@ import styles from "./styles";
 import JavaBridge from "../../native/";
 
 class Login extends Component {
+	
+  constructor(props){
+	  super(props)
+	  this.state = {
+		  username: '',
+		  password: ''
+	  }
+  }
   render() {
     return (
       <Container style={styles.container}>
@@ -40,14 +48,14 @@ class Login extends Component {
           <Form>
             <Item fixedLabel>
               <Label>Username</Label>
-              <Input />
+              <Input onChangeText={(text) => this.setState({username:text})} />
             </Item>
             <Item fixedLabel last>
               <Label>Password</Label>
-              <Input />
+              <Input password={true} onChangeText={(text) => this.setState({password:text})}/>
             </Item>
           </Form>
-          <Button block style={{ margin: 15, marginTop: 50 }} onPress={() => JavaBridge.show('Awesome', 10)}>
+          <Button block style={{ margin: 15, marginTop: 50 }} onPress={() => JavaBridge.authenticate(this.state.username, this.state.password)}>
             <Text>Sign In</Text>
           </Button>
         </Content>

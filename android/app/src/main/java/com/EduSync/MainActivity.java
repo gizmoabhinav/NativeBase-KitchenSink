@@ -1,6 +1,14 @@
 package com.EduSync;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.support.annotation.Nullable;
+
 import com.facebook.react.ReactActivity;
+import com.facebook.react.ReactActivityDelegate;
+
+import java.net.MalformedURLException;
 
 public class MainActivity extends ReactActivity {
 
@@ -11,5 +19,20 @@ public class MainActivity extends ReactActivity {
     @Override
     protected String getMainComponentName() {
         return "EduSync";
+    }
+
+    @Override
+    protected ReactActivityDelegate createReactActivityDelegate() {
+        return new ReactActivityDelegate(this, getMainComponentName()) {
+
+            @javax.annotation.Nullable
+            @Override
+            protected Bundle getLaunchOptions() {
+                Bundle initialProps = new Bundle();
+                Intent intent = getIntent();
+                initialProps.putString("UserId", intent.getStringExtra("userid"));
+                return initialProps;
+            }
+        };
     }
 }
