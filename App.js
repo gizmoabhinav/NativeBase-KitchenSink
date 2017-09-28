@@ -10,6 +10,6 @@ export default class App1 extends React.Component {
   }
 
   render() {
-    return <App />;
+    return <App {...this.props}/>;
   }
 }
