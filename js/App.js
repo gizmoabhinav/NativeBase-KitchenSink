@@ -175,5 +175,5 @@ const AppNavigator = StackNavigator(
 
 export default () =>
     <Root>
-        <AppNavigator />
+        <AppNavigator {...this.props} />
     </Root>;

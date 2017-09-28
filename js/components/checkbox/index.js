@@ -63,7 +63,7 @@ class NHCheckbox extends Component {
 						</Button>
 					</Left>
 					<Body>
-						<Title>Check Box</Title>
+						<Title>Syllabus</Title>
 					</Body>
 					<Right />
 				</Header>
@@ -72,25 +72,25 @@ class NHCheckbox extends Component {
 					<ListItem button onPress={() => this.toggleSwitch1()}>
 						<CheckBox checked={this.state.checkbox1} onPress={() => this.toggleSwitch1()} />
 						<Body>
-							<Text>Lunch Break</Text>
+							<Text>English half yearly course (4th std)</Text>
 						</Body>
 					</ListItem>
 					<ListItem button onPress={() => this.toggleSwitch2()}>
 						<CheckBox color="red" checked={this.state.checkbox2} onPress={() => this.toggleSwitch2()} />
 						<Body>
-							<Text>Daily Stand Up</Text>
+							<Text>English grammer half yearly course (5th std)</Text>
 						</Body>
 					</ListItem>
 					<ListItem button onPress={() => this.toggleSwitch3()}>
 						<CheckBox color="green" checked={this.state.checkbox3} onPress={() => this.toggleSwitch3()} />
 						<Body>
-							<Text>Finish list Screen</Text>
+							<Text>English half yearly course (5th std)</Text>
 						</Body>
 					</ListItem>
 					<ListItem button onPress={() => this.toggleSwitch4()}>
 						<CheckBox color="#000" checked={this.state.checkbox4} onPress={() => this.toggleSwitch4()} />
 						<Body>
-							<Text>Discussion with Client</Text>
+							<Text>English grammer half yearly course (6th std)</Text>
 						</Body>
 					</ListItem>
 				</Content>

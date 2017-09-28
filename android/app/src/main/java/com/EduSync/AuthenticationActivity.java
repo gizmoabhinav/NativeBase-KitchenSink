@@ -24,7 +24,7 @@ import com.microsoft.windowsazure.mobileservices.authentication.MobileServiceUse
 public class AuthenticationActivity extends AppCompatActivity {
 
     private MobileServiceClient mClient;
-    public static final String SHAREDPREFFILE = "temp";
+    public static final String SHAREDPREFFILE = "userinfo";
     public static final String USERIDPREF = "uid";
     public static final String TOKENPREF = "tkn";
     public static final int AAD_LOGIN_REQUEST_CODE = 1;
@@ -34,14 +34,7 @@ public class AuthenticationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authentication);
-        try {
-            mClient = new MobileServiceClient(
-                    "https://edusync.azurewebsites.net",
-                    this
-            );
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
+        mClient = Container.getInstance().getAzureMobileClient(this);
         authenticate();
     }
 
@@ -64,7 +57,8 @@ public class AuthenticationActivity extends AppCompatActivity {
                 }
                 @Override
                 public void onSuccess(MobileServiceUser user) {
-                    cacheUserToken(mClient.getCurrentUser());
+                    mClient.setCurrentUser(user);
+                    cacheUserToken(user);
                     launchApp();
                 }
             });

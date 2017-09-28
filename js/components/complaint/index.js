@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import {
   Container,
   Header,
@@ -6,18 +7,17 @@ import {
   Content,
   Button,
   Icon,
+  Text,
+  Body,
   Left,
   Right,
-  Body,
-  Text,
-  H3
+  Input,
+  Item
 } from "native-base";
 
 import styles from "./styles";
 
-class Emergency extends Component {
-  // eslint-disable-line
-
+class ComplaintBox extends Component {
   render() {
     return (
       <Container style={styles.container}>
@@ -28,19 +28,26 @@ class Emergency extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Emergency</Title>
+            <Title>Complaints</Title>
           </Body>
           <Right />
         </Header>
 
-        <Content style={{ backgroundColor: "#fff" }}>
-          <Button full warning style={styles.mt15}><Text>Security Emergency</Text></Button>
-          <Button full danger style={styles.mt15}><Text>Medical Emergency</Text></Button>
-          <Button full dark style={styles.mt15}><Text>Need Assistance</Text></Button>
+        <Content padder>
+          <Item regular>
+            <Input placeholder="Enter issue" />
+          </Item>
+          <Item regular>
+            <Input placeholder="Enter description" />
+          </Item>
+		  
+          <Button block style={{ margin: 15, marginTop: 50 }}>
+            <Text>Submit Complaint</Text>
+          </Button>
         </Content>
       </Container>
     );
   }
 }
 
-export default Emergency;
+export default ComplaintBox;

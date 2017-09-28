@@ -37,12 +37,22 @@ import Toast from "./components/toast";
 import Actionsheet from "./components/actionsheet";
 import NHLogin from "./components/accounts/login/";
 import NHNotices from "./components/notice/";
+import Map from "./components/maps/";
+import NHAttendance from "./components/attendance/";
+import NHVideo from "./components/video/";
+import NHComplaintBox from "./components/complaint/";
+import NHEmergency from "./components/emergency/";
 
 const DrawerExample = DrawerNavigator(
   {
     Home: { screen: Home },
-	NHLogin: { screen: NHLogin },
-	NHNotices: { screen: NHNotices },
+    NHLogin: { screen: NHLogin },
+    NHNotices: { screen: NHNotices },
+    Map: { screen: Map},
+    NHAttendance: { screen: NHAttendance},
+    NHVideo: { screen: NHVideo},
+    NHComplaintBox: { screen: NHComplaintBox},
+    NHEmergency: { screen: NHEmergency},
     Anatomy: { screen: Anatomy },
     Header: { screen: Header },
     Footer: { screen: Footer },

@@ -95,6 +95,11 @@ import Toast from "./components/toast";
 import statusBarColor from "./themes/variables";
 import NHLogin from "./components/accounts/login/";
 import NHNotices from "./components/notice/";
+import Map from "./components/maps/";
+import NHAttendance from "./components/attendance/";
+import NHVideo from "./components/video/";
+import NHComplaintBox from "./components/complaint/";
+import NHEmergency from "./components/emergency/";
 
 class AppNavigator extends Component {
   render() {

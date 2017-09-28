@@ -30,7 +30,7 @@ public class MainActivity extends ReactActivity {
             protected Bundle getLaunchOptions() {
                 Bundle initialProps = new Bundle();
                 Intent intent = getIntent();
-                initialProps.putString("UserId", intent.getStringExtra("userid"));
+                initialProps.putString("userid", intent.getStringExtra("userid"));
                 return initialProps;
             }
         };
